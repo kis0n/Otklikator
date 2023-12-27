@@ -7,7 +7,7 @@ User=root
 Group=root
 Type=simple
 Restart=always
-ExecStart=/usr/bin/python3 /bot/bot.py
+ExecStart=/usr/bin/python3 /bot/Otklikator/bot.py
 
 [Install]
 WantedBy=multi-user.target
