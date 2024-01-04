@@ -149,7 +149,6 @@ async def echo_message(message: types.Message):
 			elif otkl == otkaz:
 				message.answer(f'Количество откликов {str(otkl)} \n' \
 				f'Количество отказов {str(otkaz)} \n'
-				f'Количество игноров {str(ignor)} \n'
 				f'Жаль собеседований пока нет!\n'
 			)
 			else:
