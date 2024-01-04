@@ -147,7 +147,7 @@ async def echo_message(message: types.Message):
 			elif otkl == 0:
 				await message.answer(text= "Чтобы была статистика, давай откликаться на вакансии 🙂")
 			elif otkl == otkaz:
-				message.answer(f'Количество откликов {str(otkl)} \n' \
+				await message.answer(f'Количество откликов {str(otkl)} \n' \
 				f'Количество отказов {str(otkaz)} \n'
 				f'Жаль собеседований пока нет!\n'
 			)
