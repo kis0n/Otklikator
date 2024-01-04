@@ -65,7 +65,7 @@ async def obnul(message: Message):
 	sobes = 0
 	audio_file_id = 'CQACAgIAAxkBAAEX8IZlinGlrhwDaN35lX7ZCS-jIpucbgACTzkAAru0WEh6V6ctd9-2azME'
 	# print(otkl, otkaz, test, sobes)
-	await message.answer(text= "Всё обнулил!")
+	await message.answer(text= "Всё обнулил! 🤙")
 
 @dp.message(F.text == "обнулить")
 async def obnul(message: Message):
@@ -79,7 +79,7 @@ async def obnul(message: Message):
 	sobes = 0
 	audio_file_id = 'CQACAgIAAxkBAAEX8IZlinGlrhwDaN35lX7ZCS-jIpucbgACTzkAAru0WEh6V6ctd9-2azME'
 	# print(otkl, otkaz, test, sobes)
-	await message.answer(text= "Всё обнулил!")
+	await message.answer(text= "Всё обнулил! 🤙")
 
 
 @dp.message()
@@ -91,7 +91,7 @@ async def echo_message(message: types.Message):
 		global otkl
 		otkl += 1
 		print(otkl)
-		await message.answer(text= "Отлично! Чем больше откликов, тем больше шансов устроиться!" )
+		await message.answer(text= "Отлично! Чем больше откликов, тем больше шансов найти работу!🙂" )
 	
 
 		# await message.reply(text="кайфуем!").  #функция, которая шлет ответ на предыдущее сообщение с подписью
@@ -99,9 +99,9 @@ async def echo_message(message: types.Message):
 		if otkl > 0:
 			global otkaz
 			otkaz += 1
-			await message.answer(text= "Тааак, отказ. Ну ничего страшного! Серьезно, это же тория вероятности! \nОтказов не будет только у того, кто ни на что не откликается!")
+			await message.answer(text= "Тааак, отказ. Ну ничего страшного! \n Без них никак, особенно в начале! 🙂")
 		else:
-		 await message.answer(text= "Какой отказ, если еще откликов не было? :)")
+		 await message.answer(text= "Какой отказ, если еще откликов не было? 🙂")
 		
 		
 
@@ -109,9 +109,9 @@ async def echo_message(message: types.Message):
 		if otkl > 0:
 			global test
 			test += 1
-			await message.answer(text= "О, тестовое задание! Давай давай, распиши всё четко и не затягивай со сдачей!")
+			await message.answer(text= "О, тестовое задание! Давай-давай, распиши всё четко и не затягивай со сдачей!")
 		else:
-		 await message.answer(text= "Какое тестовое, если еще откликов нет? :)")
+		 await message.answer(text= "Какое тестовое, если еще откликов нет? 🙂")
 
 
 
@@ -121,7 +121,7 @@ async def echo_message(message: types.Message):
 			sobes += 1
 			await message.answer(text= "УФ, собес... Подготовься получше! Буду держать за тебя кулачки!👊")
 		else:
-		 await message.answer(text= "На собес без откликов? Не верю :)")
+		 await message.answer(text= "На собес без откликов? Не верю 🙂")
 
 
 	elif message.text.startswith("📈"):
@@ -145,9 +145,9 @@ async def echo_message(message: types.Message):
 				f'Жаль собеседований пока нет!\n'
 			)
 			elif otkl == 0:
-				await message.answer(text= "Чтобы была статистика, давай откликаться на вакансии )")
+				await message.answer(text= "Чтобы была статистика, давай откликаться на вакансии 🙂")
 			else:
-				await message.answer(text= "Отказов больше чем откликов? Интересно :)")
+				await message.answer(text= "Отказов больше чем откликов? Интересно 🙂")
 
 		# print (otkl)
 		# print (sobes) 
@@ -157,11 +157,11 @@ async def echo_message(message: types.Message):
 			
 	elif message.text.startswith("🎉"):
 		if otkl > 0:
-			await message.answer(f'О ты нажал оффер! Поздравляю! \n' \
+			await message.answer(f'Ебоииииии, ты получил ОФФЕР!!! Поздравляю!!! 🥳🥳🥳 \n' \
 				f'https://www.youtube.com/watch?v=Sagg08DrO5U&t=12s \n'
 			) 
 		else:
-		 await message.answer(text= "Оффер без откликов? Ты или сеньор помидор, которого все хотят выдеть у себя в команде или тестировщик, что тычет везде подряд )")
+		 await message.answer(text= "Оффер без откликов? Ты или сеньор-помидор, которого все хотят видеть у себя в команде, или тестировщик, что тычет везде подряд 🙂")
 
 		
 		# await bot.send_video(message.chat.id, 'https://media.giphy.com/media/TcdpZwYDPlWXC/giphy.gif')
@@ -171,7 +171,7 @@ async def echo_message(message: types.Message):
 
 	elif message.text.startswith("/"):	
 		await message.answer(f'Привет, {message.from_user.first_name}  \n' \
-			f'Я помогу тебе вести статистику по количеству откликов, отказов и собеседований при трудоустройстве. \n' \
+			f'Я помогу тебе вести статистику откликов, отказов и собеседований при трудоустройстве. \n' \
 			f'Если вдруг тебе нужно обнулить все показатели - напиши мне "Обнулить"\n' \
 			f'Я желаю тебе поскоре найти работу и не тратить моё время попусту!\n',
 		reply_markup=main_kb)
@@ -180,7 +180,7 @@ async def echo_message(message: types.Message):
 	elif message.sticker:
 		await message.answer_sticker(sticker=message.sticker.file_id) #ответ стикером на стикер
 	else:
-		await message.reply(text="шлешь всякую херню. Прекращай!")
+		await message.reply(text="Прости, но я не понимаю 😅")
 
 
 
