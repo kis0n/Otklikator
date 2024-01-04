@@ -146,6 +146,11 @@ async def echo_message(message: types.Message):
 			)
 			elif otkl == 0:
 				await message.answer(text= "Чтобы была статистика, давай откликаться на вакансии 🙂")
+			elif otkl == otkaz:
+				message.answer(f'Количество откликов {str(otkl)} \n' \
+				f'Количество отказов {str(otkaz)} \n'
+				f'Количество игноров {str(ignor)} \n'
+				f'Жаль собеседований пока нет!\n'
 			else:
 				await message.answer(text= "Отказов больше чем откликов? Интересно 🙂")
 
@@ -180,7 +185,7 @@ async def echo_message(message: types.Message):
 	elif message.sticker:
 		await message.answer_sticker(sticker=message.sticker.file_id) #ответ стикером на стикер
 	else:
-		await message.reply(text="Прости, но я не понимаю 😅")
+		await message.reply(text="Прости, но1 я не понимаю 😅")
 
 
 
