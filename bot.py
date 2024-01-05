@@ -185,7 +185,7 @@ async def echo_message(message: types.Message):
 	elif message.sticker:
 		await message.answer_sticker(sticker=message.sticker.file_id) #ответ стикером на стикер
 	else:
-		await message.reply(text="Прости, но1 я не понимаю 😅")
+		await message.reply(text="Прости, но я не понимаю 😅")
 
 
 
